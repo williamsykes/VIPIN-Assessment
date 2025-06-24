@@ -122,54 +122,57 @@ class _HomeState extends State<Home> {
           ],
         ),
       ),
-      bottomNavigationBar: GradientBorderContainer(
-        color: const Color(0xFF3D3D3D),
-        borderGradient: const LinearGradient(
-          colors: [
-            Color(0xFF00DAE7),
-            Color(0xFF0079A8),
-          ],
-        ),
-        radius: 32,
-        borderWidth: 4,
-        content: GNav(
-          selectedIndex: _selectedIndex,
-          onTabChange: _onItemTapped,
-          backgroundColor: Colors.transparent,
-          color: Colors.white,
-          activeColor: Colors.black,
-          tabBackgroundGradient: const LinearGradient(
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: GradientBorderContainer(
+          color: const Color(0xFF3D3D3D),
+          borderGradient: const LinearGradient(
             colors: [
               Color(0xFF00DAE7),
               Color(0xFF0079A8),
             ],
           ),
-          tabShadow: [
-            BoxShadow(
-              color: Colors.black.withOpacity(0.2),
-              blurRadius: 8,
-              offset: const Offset(0, 4),
+          radius: 32,
+          borderWidth: 4,
+          content: GNav(
+            selectedIndex: _selectedIndex,
+            onTabChange: _onItemTapped,
+            backgroundColor: Colors.transparent,
+            color: Colors.white,
+            activeColor: Colors.black,
+            tabBackgroundGradient: const LinearGradient(
+              colors: [
+                Color(0xFF00DAE7),
+                Color(0xFF0079A8),
+              ],
             ),
-          ],
-          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-          tabs: const [
-            GButton(
-              icon: Icons.home,
-              text: 'HOME',
-            ),
-            GButton(
-              icon: Icons.calendar_today,
-              text: 'TIMESHEETS',
-            ),
-            GButton(
-              icon: Icons.people,
-              text: 'EMPLOYEES',
-            ),
-            GButton(
-              icon: Icons.dashboard,
-              text: 'MENU',
-            ),
-          ],
+            tabShadow: [
+              BoxShadow(
+                color: Colors.black.withOpacity(0.2),
+                blurRadius: 8,
+                offset: const Offset(0, 4),
+              ),
+            ],
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+            tabs: const [
+              GButton(
+                icon: Icons.home,
+                text: 'HOME',
+              ),
+              GButton(
+                icon: Icons.calendar_today,
+                text: 'TIMESHEETS',
+              ),
+              GButton(
+                icon: Icons.people,
+                text: 'EMPLOYEES',
+              ),
+              GButton(
+                icon: Icons.dashboard,
+                text: 'MENU',
+              ),
+            ],
+          ),
         ),
       ),
     );
