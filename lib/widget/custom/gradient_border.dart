@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:vipin_assessment/theme/colors.dart';
 
 class GradientBorderContainer extends StatelessWidget {
   final Widget content;
@@ -17,7 +18,7 @@ class GradientBorderContainer extends StatelessWidget {
     required this.content,
     required this.borderGradient,
     super.key,
-    this.color = Colors.black,
+    this.color = CustomColors.background,
     this.radius = 0.0,
     this.borderWidth = 1.0,
     this.margin,
