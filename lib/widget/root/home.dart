@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:material_symbols_icons/symbols.dart';
+import 'package:vipin_assessment/screens/home_view.dart';
 import 'package:vipin_assessment/theme/colors.dart';
 import 'package:vipin_assessment/theme/text_styles.dart';
 import 'package:vipin_assessment/widget/custom/googleNav/google_nav_bar.dart';
@@ -17,46 +18,7 @@ class _HomeState extends State<Home> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
-    Column(
-      children: [
-        Padding(
-          padding: const EdgeInsets.symmetric(
-            horizontal: 16.0,
-            vertical: 20,
-          ),
-          child: Align(
-            alignment: Alignment.center,
-            child: Text(
-              'Welcome Back',
-              style: TextStyles.white25ExtraBold,
-            ),
-          ),
-        ),
-        Expanded(
-          child: ListView(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0),
-            children: const [
-              HomeButton(
-                icon: Icons.qr_code_scanner,
-                label: 'Scan Employee',
-              ),
-              HomeButton(
-                icon: Icons.flag,
-                label: 'Flagged Events',
-              ),
-              HomeButton(
-                icon: Icons.flight_takeoff,
-                label: 'Employee Time Off',
-              ),
-              HomeButton(
-                icon: Symbols.distance,
-                label: 'Add Employees for Manual Clocking',
-              ),
-            ],
-          ),
-        ),
-      ],
-    ),
+    const HomeView(),
     Center(
       child: Text(
         'Timesheets',

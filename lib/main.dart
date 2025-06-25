@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:vipin_assessment/screens/home.dart';
+import 'package:vipin_assessment/widget/root/home.dart';
 
 void main() {
   runApp(const MyApp());
