@@ -16,13 +16,18 @@ class HomeButton extends StatelessWidget {
       color: Colors.grey[800],
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       margin: const EdgeInsets.symmetric(vertical: 8),
-      child: ListTile(
-        leading: Icon(icon, color: Colors.white),
-        title: Text(label, style: const TextStyle(color: Colors.white)),
-        trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+      clipBehavior: Clip.antiAlias,
+      // Card internally has a Material, so no need to wrap Inkwell with Material
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
         onTap: () {
-          // TODO: naviaget
+          // TODO: navigate
         },
+        child: ListTile(
+          leading: Icon(icon, color: Colors.white),
+          title: Text(label, style: const TextStyle(color: Colors.white)),
+          trailing: const Icon(Icons.arrow_forward_ios, color: Colors.white),
+        ),
       ),
     );
   }
